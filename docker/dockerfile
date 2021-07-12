@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY ./app /app
 
-RUN pip install django djangorestframework django-filter
+RUN pip install django djangorestframework django-filter requests
 
 CMD python3 manage.py runserver 0.0.0.0:8000
