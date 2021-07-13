@@ -7,8 +7,7 @@ from django.shortcuts import render
 
 import requests
 from bs4 import BeautifulSoup
-import os
-
+import settings
 
 def index(request):
 

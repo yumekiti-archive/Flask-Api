@@ -4,6 +4,8 @@ WORKDIR /app
 
 COPY ./app /app
 
-RUN pip install django djangorestframework django-filter requests bs4 django-environ
+RUN pip install django djangorestframework django-filter requests bs4 django-environ python-dotenv
+
+RUN python3 ./school/settings.py
 
 CMD python3 manage.py runserver 0.0.0.0:8000
