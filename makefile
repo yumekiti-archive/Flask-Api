@@ -1,6 +1,3 @@
-init:
-	docker compose -f ./docker/docker-compose.yml up -d --build
-	docker compose -f ./docker/docker-compose.yml exec api cp ./school/.env.example ./school/.env
 up:
 	docker compose -f ./docker/docker-compose.yml up -d --build
 down:
