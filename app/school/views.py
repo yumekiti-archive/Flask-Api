@@ -10,6 +10,7 @@ from bs4 import BeautifulSoup
 
 def index(request):
 
+    # 変更必須
     url = "持ってくるURL(?pk=まで)"
     url_login = "ログインURL"
     id = "学籍番号"
