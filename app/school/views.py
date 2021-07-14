@@ -7,18 +7,17 @@ from django.shortcuts import render
 
 import requests
 from bs4 import BeautifulSoup
-import settings
 
 def index(request):
 
-    url = 
-    url_login = 
-    id = 
-    ps = 
+    url = "持ってくるURL(?pk=まで)"
+    url_login = "ログインURL"
+    id = "学籍番号"
+    ps = "パスワード"
 
     # url宣言 resultに返す
-    if 'url' in request.GET:
-        url += request.GET['url']
+    if 'pk' in request.GET:
+        url += request.GET['pk']
 
     # info宣言
     login_info = {
