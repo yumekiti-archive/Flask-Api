@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>SchoolApp-Api</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <button @click="this.get">get</button>
+            <button @click="this.post">post</button>
+            <input v-model="formData.text" />
+            <p>
+                [[ result ]]
+            </p>
+        </div>
+    </body>
+</html>
+
+<script>
+    
+    var app = new Vue({
+        el: '#app',
+        delimiters: ['[[', ']]'], // Flaskのdelimiterとの重複を回避
+        data: {
+            result: 'click get',
+            formData: {
+                text: "let's post",
+            },
+        },
+        methods:{
+            get(){
+                axios
+                    .get('http://localhost:5000/api')
+                    .then(res => {
+                        this.result = res
+                    })
+            },
+            post(){
+                axios
+                    .post('http://localhost:5000/api', this.formData)
+                    .then(res => {
+                        this.result = res
+                    })
+            }
+        },
+    })
+</script>

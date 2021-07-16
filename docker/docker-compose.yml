@@ -3,12 +3,9 @@ version: "3"
 services:
 
     api:
-        container_name: Django
-        build: 
-            context: ../
-            dockerfile: ./docker/dockerfile
+        container_name: api
+        build: .
         volumes:
-            - ../app:/app
+            - ../back:/app
         ports:
-            - 8000:8000
-        tty: true
+            - 5000:5000

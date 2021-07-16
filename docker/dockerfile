@@ -1,9 +1,7 @@
-FROM python:3.8
+FROM python:alpine
 
 WORKDIR /app
 
-COPY ./app /app
+RUN pip install Flask
 
-RUN pip install django djangorestframework django-filter requests bs4 django-environ
-
-CMD python3 manage.py runserver 0.0.0.0:8000
+CMD ["python", "api.py"]

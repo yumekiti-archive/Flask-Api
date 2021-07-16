@@ -1,12 +1,12 @@
-# SchoolApp-api
+# SchoolApp-Api
 
-某学校のページのデータを持ってくるapiもどき
+某学校のページのデータを持ってくるapi
 
 ## 1.変数入れておく
 
 以下ファイルに変更を加える
 
-./app/school/views.py
+./back/api.py
 ```
 # 変更必須
 url = "持ってくるURL(?pk=まで)"

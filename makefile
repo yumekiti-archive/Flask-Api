@@ -14,6 +14,3 @@ docker-crean:
 	docker rmi `docker images -q` ; \
 	docker system prune ; \
 	docker volume prune
-
-run:
-	docker compose -f ./docker/docker-compose.yml exec api python3 manage.py runserver 0.0.0.0:8000
